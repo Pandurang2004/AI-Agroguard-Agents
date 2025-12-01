@@ -5,3 +5,4 @@ streamlit
 google-genai
 pillow
 pandas
+google-generativeai
