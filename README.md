@@ -115,52 +115,5 @@ Language selection in the UI:
 
 ## 🏗 Architecture Diagram (Mermaid)
 
-You can embed this in your docs, or render it into an image for Kaggle:
+<img width="1294" height="649" alt="image" src="https://github.com/user-attachments/assets/4a9fb808-8e61-47ce-a0f1-4ab651610542" />
 
-```mermaid
-flowchart LR
-
-    subgraph UI["🖥️ Streamlit Web UI"]
-        A[Farmer Inputs\nID, Crop, Location, Symptoms, Image, Language]
-        B[Results Dashboard\nDiagnosis, Risk, Plan, History]
-    end
-
-    subgraph Orchestrator["🧠 Orchestrator (app.py)"]
-        O1[Run Pipeline]
-    end
-
-    subgraph Agents["🤖 Multi-Agent Layer"]
-        D[DiagnosisAgent]
-        R[RecommendationAgent]
-        W[WeatherRiskAgent]
-        M[MemoryAgent]
-        RP[ReportAgent]
-    end
-
-    subgraph LLM["✨ LLM & Vision"]
-        L[LLMClient\n(Gemini)]
-    end
-
-    subgraph Tools["🛠 External Tools"]
-        T1[Weather Tool\ncore/tools.py\nOpen-Meteo API]
-        T2[Memory Store\ncore/memory_store.py\nfarmer_memory.json]
-    end
-
-    A --> O1
-    O1 --> D
-    O1 --> W
-    O1 --> M
-    O1 --> R
-    O1 --> RP
-
-    D --> L
-    R --> L
-    RP --> L
-
-    W --> T1
-    M --> T2
-
-    M --> R
-    M --> RP
-
-    O1 --> B
