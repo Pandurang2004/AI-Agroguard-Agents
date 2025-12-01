@@ -113,7 +113,7 @@ Language selection in the UI:
 
 ---
 
-## 🏗 Architecture Diagram (Mermaid)
+## 🏗 Architecture Diagram 
 
 <img width="1294" height="649" alt="image" src="https://github.com/user-attachments/assets/4a9fb808-8e61-47ce-a0f1-4ab651610542" />
 
