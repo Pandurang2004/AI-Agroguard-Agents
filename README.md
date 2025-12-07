@@ -1,7 +1,9 @@
 # 🌾 AI AgroGuard – Multi-Agent Crop Health & Pest Risk Copilot
 
 AI AgroGuard is a **multi-agent AI system** that helps small and rural farmers diagnose crop issues, get localized treatment guidance, and understand weather-driven risk — in **their own language**.
+Link to see :  <a href="https://ai-agroguard.streamlit.app/">Go live</a>
 
+--- 
 It combines:
 - 👨‍🌾 a simple Streamlit UI for farmers,
 - 🤖 multiple LLM-powered agents (diagnosis, recommendation, weather risk, reporting),
